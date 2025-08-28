@@ -94,11 +94,11 @@ export default function Projects() {
                 <p className="text-muted-foreground mb-4" data-testid={`project-description-${project.title.toLowerCase().replace(/\s+/g, '-')}`}>
                   {project.description}
                 </p>
-                <div className="flex flex-wrap gap-2 mb-4">
+                <div className="flex flex-wrap gap-1 sm:gap-2 mb-4 w-full">
                   {project.tech.map((tech) => (
                     <span 
                       key={tech}
-                      className="px-2 py-1 bg-muted text-xs rounded"
+                      className="px-2 py-1 bg-muted text-xs rounded flex-shrink-0 max-w-full truncate"
                       data-testid={`project-tech-${tech.toLowerCase().replace(/\s+/g, '-')}-${project.title.toLowerCase().replace(/\s+/g, '-')}`}
                     >
                       {tech}
@@ -118,14 +118,14 @@ export default function Projects() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="mt-12 text-center"
+          className="mt-12 text-center px-4"
         >
-          <div className="glass inline-flex rounded-lg p-2">
+          <div className="glass inline-flex flex-wrap justify-center rounded-lg p-2 gap-1 max-w-full">
             {filters.map((filter) => (
               <button
                 key={filter}
                 onClick={() => setActiveFilter(filter)}
-                className={`px-4 py-2 rounded text-sm font-medium transition-colors ${
+                className={`px-3 sm:px-4 py-2 rounded text-xs sm:text-sm font-medium transition-colors whitespace-nowrap flex-shrink-0 ${
                   activeFilter === filter 
                     ? "bg-primary text-primary-foreground" 
                     : "hover:bg-muted"
