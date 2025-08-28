@@ -44,14 +44,14 @@ export default function Contact() {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
           <motion.div 
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             className="space-y-8"
           >
-            <div className="glass p-8 rounded-xl" data-testid="contact-info-card">
+            <div className="glass p-6 lg:p-8 rounded-xl" data-testid="contact-info-card">
               <h3 className="text-2xl font-bold mb-6">Get In Touch</h3>
               <div className="space-y-4">
                 {contactInfo.map((info, index) => (
@@ -73,7 +73,7 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="glass p-6 rounded-xl text-center" data-testid="competitive-programming-card">
+            <div className="glass p-4 lg:p-6 rounded-xl text-center" data-testid="competitive-programming-card">
               <h4 className="text-lg font-bold mb-4">Competitive Programming</h4>
               <div className="flex justify-center space-x-8">
                 <div className="text-center" data-testid="codechef-rating">
@@ -95,40 +95,40 @@ export default function Contact() {
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="glass p-8 rounded-xl"
+            className="glass p-6 lg:p-8 rounded-xl"
             data-testid="collaboration-card"
           >
             <img 
               src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" 
               alt="Modern collaborative workspace with team members working together" 
-              className="w-full h-64 object-cover rounded-lg mb-6" 
+              className="w-full h-48 lg:h-64 object-cover rounded-lg mb-4 lg:mb-6" 
               data-testid="img-collaboration"
             />
             
-            <h3 className="text-2xl font-bold mb-4">Let's Work Together</h3>
-            <p className="text-muted-foreground mb-6">
+            <h3 className="text-xl lg:text-2xl font-bold mb-4">Let's Work Together</h3>
+            <p className="text-sm lg:text-base text-muted-foreground mb-4 lg:mb-6">
               I'm always open to discussing new opportunities, innovative projects, or collaborations in cybersecurity, fintech, and web development.
             </p>
             
             <div className="space-y-4">
               <div className="flex items-center space-x-3 text-sm" data-testid="availability-internship">
                 <div className="w-2 h-2 bg-accent rounded-full"></div>
-                <span>Available for internships and full-time opportunities</span>
+                <span className="text-sm lg:text-base">Available for internships and full-time opportunities</span>
               </div>
               <div className="flex items-center space-x-3 text-sm" data-testid="availability-freelance">
                 <div className="w-2 h-2 bg-primary rounded-full"></div>
-                <span>Open to freelance and contract work</span>
+                <span className="text-sm lg:text-base">Open to freelance and contract work</span>
               </div>
               <div className="flex items-center space-x-3 text-sm" data-testid="availability-research">
                 <div className="w-2 h-2 bg-secondary rounded-full"></div>
-                <span>Interested in research collaborations</span>
+                <span className="text-sm lg:text-base">Interested in research collaborations</span>
               </div>
             </div>
 
-            <div className="mt-8">
+            <div className="mt-6 lg:mt-8">
               <a
                 href="mailto:gurnishsinghsangha@gmail.com"
-                className="w-full bg-gradient-to-r from-primary to-secondary px-6 py-3 rounded-lg hover:opacity-80 transition-all duration-300 transform hover:scale-105 block text-center"
+                className="w-full bg-gradient-to-r from-primary to-secondary px-4 lg:px-6 py-3 rounded-lg hover:opacity-80 transition-all duration-300 transform hover:scale-105 block text-center text-sm lg:text-base font-medium"
                 data-testid="button-send-message"
               >
                 Send Message

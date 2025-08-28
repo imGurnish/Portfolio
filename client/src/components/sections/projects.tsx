@@ -52,13 +52,13 @@ export default function Projects() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text" data-testid="projects-title">Featured Projects</h2>
-          <p className="text-xl text-muted-foreground" data-testid="projects-subtitle">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 gradient-text" data-testid="projects-title">Featured Projects</h2>
+          <p className="text-lg sm:text-xl text-muted-foreground px-4" data-testid="projects-subtitle">
             Innovative solutions built with cutting-edge technologies
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {filteredProjects.map((project, index) => (
             <motion.div
               key={project.title}
@@ -74,7 +74,7 @@ export default function Projects() {
                 className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300" 
                 data-testid={`project-image-${project.title.toLowerCase().replace(/\s+/g, '-')}`}
               />
-              <div className="p-6">
+              <div className="p-4 sm:p-6">
                 <div className="flex items-center justify-between mb-3">
                   <h3 className="text-xl font-bold" data-testid={`project-title-${project.title.toLowerCase().replace(/\s+/g, '-')}`}>{project.title}</h3>
                   <div className="flex space-x-2">

@@ -10,21 +10,21 @@ export default function About() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text" data-testid="about-title">About Me</h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto" data-testid="about-description">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 gradient-text" data-testid="about-title">About Me</h2>
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto px-4" data-testid="about-description">
             Currently pursuing B.Tech in Computer Science at IIIT Kota with a CGPA of 8.33. 
             Passionate about building secure, scalable solutions and contributing to the cybersecurity community.
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <motion.div 
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             className="space-y-6"
           >
-            <div className="glass p-8 rounded-xl" data-testid="card-education">
+            <div className="glass p-6 sm:p-8 rounded-xl" data-testid="card-education">
               <h3 className="text-2xl font-bold mb-4 text-accent">Education</h3>
               <div className="space-y-2">
                 <p className="text-lg font-semibold" data-testid="text-college">Indian Institute of Information Technology (IIIT), Kota</p>
@@ -33,7 +33,7 @@ export default function About() {
               </div>
             </div>
 
-            <div className="glass p-8 rounded-xl" data-testid="card-achievements">
+            <div className="glass p-6 sm:p-8 rounded-xl" data-testid="card-achievements">
               <h3 className="text-2xl font-bold mb-4 text-accent">Achievements</h3>
               <div className="space-y-3">
                 <div className="flex items-center space-x-3" data-testid="achievement-suraksha">
@@ -58,7 +58,7 @@ export default function About() {
             transition={{ duration: 0.8 }}
             className="space-y-6"
           >
-            <div className="glass p-6 rounded-xl" data-testid="card-skills">
+            <div className="glass p-4 sm:p-6 rounded-xl" data-testid="card-skills">
               <img 
                 src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" 
                 alt="Blockchain technology visualization with interconnected nodes" 
@@ -78,7 +78,7 @@ export default function About() {
               </div>
             </div>
 
-            <div className="glass p-6 rounded-xl" data-testid="card-current-roles">
+            <div className="glass p-4 sm:p-6 rounded-xl" data-testid="card-current-roles">
               <img 
                 src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300" 
                 alt="Fintech security concept with digital payment protection" 

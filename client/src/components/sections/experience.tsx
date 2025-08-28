@@ -37,8 +37,8 @@ export default function Experience() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text" data-testid="experience-title">Experience</h2>
-          <p className="text-xl text-muted-foreground" data-testid="experience-subtitle">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 gradient-text" data-testid="experience-title">Experience</h2>
+          <p className="text-lg sm:text-xl text-muted-foreground px-4" data-testid="experience-subtitle">
             Leadership and technical roles shaping the cybersecurity community
           </p>
         </motion.div>
@@ -57,7 +57,7 @@ export default function Experience() {
                 transition={{ duration: 0.8, delay: index * 0.2 }}
                 className={`flex flex-col md:flex-row${index % 2 === 1 ? '-reverse' : ''} items-center`}
               >
-                <div className="md:w-1/2 md:pr-8 mb-8 md:mb-0">
+                <div className="md:w-1/2 md:pr-8 mb-6 md:mb-0">
                   <img 
                     src={exp.image}
                     alt={exp.alt}
@@ -67,7 +67,7 @@ export default function Experience() {
                 </div>
                 <div className={`hidden md:block absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-${exp.color} rounded-full border-4 border-background`}></div>
                 <div className={`md:w-1/2 ${index % 2 === 0 ? 'md:pl-8' : 'md:pr-8'}`}>
-                  <div className="glass p-6 rounded-xl" data-testid={`experience-card-${index}`}>
+                  <div className="glass p-4 sm:p-6 rounded-xl" data-testid={`experience-card-${index}`}>
                     <div className="flex items-center justify-between mb-3">
                       <h3 className="text-xl font-bold" data-testid={`experience-title-${index}`}>{exp.title}</h3>
                       <span className={`text-sm text-${exp.color}`} data-testid={`experience-period-${index}`}>{exp.period}</span>
