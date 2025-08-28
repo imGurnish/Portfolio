@@ -58,6 +58,31 @@ export default function Projects() {
           </p>
         </motion.div>
 
+        {/* Project Filter */}
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="mb-8 text-center px-4"
+        >
+          <div className="glass inline-flex flex-wrap justify-center rounded-lg p-2 gap-1 max-w-full">
+            {filters.map((filter) => (
+              <button
+                key={filter}
+                onClick={() => setActiveFilter(filter)}
+                className={`px-3 sm:px-4 py-2 rounded text-xs sm:text-sm font-medium transition-colors whitespace-nowrap flex-shrink-0 ${
+                  activeFilter === filter 
+                    ? "bg-primary text-primary-foreground" 
+                    : "hover:bg-muted"
+                }`}
+                data-testid={`filter-button-${filter.toLowerCase()}`}
+              >
+                {filter}
+              </button>
+            ))}
+          </div>
+        </motion.div>
+
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {filteredProjects.map((project, index) => (
             <motion.div
@@ -112,31 +137,6 @@ export default function Projects() {
             </motion.div>
           ))}
         </div>
-
-        {/* Project Filter */}
-        <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="mt-12 text-center px-4"
-        >
-          <div className="glass inline-flex flex-wrap justify-center rounded-lg p-2 gap-1 max-w-full">
-            {filters.map((filter) => (
-              <button
-                key={filter}
-                onClick={() => setActiveFilter(filter)}
-                className={`px-3 sm:px-4 py-2 rounded text-xs sm:text-sm font-medium transition-colors whitespace-nowrap flex-shrink-0 ${
-                  activeFilter === filter 
-                    ? "bg-primary text-primary-foreground" 
-                    : "hover:bg-muted"
-                }`}
-                data-testid={`filter-button-${filter.toLowerCase()}`}
-              >
-                {filter}
-              </button>
-            ))}
-          </div>
-        </motion.div>
       </div>
     </section>
   );
