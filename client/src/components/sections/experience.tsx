@@ -8,10 +8,7 @@ export default function Experience() {
       period: "Aug 2025 – Present",
       image: "https://images.unsplash.com/photo-1504639725590-34d0984388bd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
       alt: "Cybersecurity workshop with hands-on CTF activities",
-      achievements: [
-        "Spearheaded 10+ hands-on workshops and CTFs on cybersecurity fundamentals, resulting in a 40% increase in active member engagement.",
-        "Presented technical sessions on Web Vulnerabilities, Network Security, and Cryptography to an average audience of 50+ students."
-      ],
+      achievements: [],
       color: "accent"
     },
     {
@@ -20,10 +17,7 @@ export default function Experience() {
       period: "March 2025 – Present",
       image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
       alt: "Campus event portal development with modern web technologies",
-      achievements: [
-        "Managed the development and maintenance of the college's official event portal, built on the MERN stack, serving 500+ users.",
-        "Engineered a proof-of-concept for a campus-wide attendance system using BLE in Flutter and a Python FastAPI backend."
-      ],
+      achievements: [],
       color: "secondary"
     }
   ];
