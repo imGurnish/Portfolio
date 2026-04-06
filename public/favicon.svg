@@ -1,13 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
-	<rect width="64" height="64" rx="20" fill="#050816"/>
-	<path d="M18 42.5L31.7 16H37L23.3 42.5H18Z" fill="url(#g)"/>
-	<path d="M34.5 42.5L48 16H53L39.5 42.5H34.5Z" fill="#67e8f9" fill-opacity="0.9"/>
-	<path d="M17 48C24.5 44.2 29.6 39.1 32 32C34.4 39.1 39.5 44.2 47 48" stroke="#e5eef9" stroke-width="2.8" stroke-linecap="round"/>
-	<circle cx="32" cy="32" r="4" fill="#ffffff"/>
+	<rect width="64" height="64" rx="18" fill="#050816"/>
 	<defs>
-		<linearGradient id="g" x1="18" y1="16" x2="41" y2="48" gradientUnits="userSpaceOnUse">
-			<stop stop-color="#a855f7"/>
-			<stop offset="1" stop-color="#22d3ee"/>
+		<clipPath id="avatarClip">
+			<circle cx="32" cy="32" r="24"/>
+		</clipPath>
+		<linearGradient id="ring" x1="10" y1="10" x2="54" y2="54" gradientUnits="userSpaceOnUse">
+			<stop stop-color="#67e8f9"/>
+			<stop offset="1" stop-color="#a855f7"/>
 		</linearGradient>
 	</defs>
+	<circle cx="32" cy="32" r="24.75" stroke="url(#ring)" stroke-width="1.5" opacity="0.95"/>
+	<g clip-path="url(#avatarClip)">
+		<image href="/Gurnish_Singh_Sangha.jpg" x="8" y="8" width="48" height="48" preserveAspectRatio="xMidYMid slice"/>
+	</g>
+	<circle cx="32" cy="32" r="24" stroke="rgba(255,255,255,0.12)" stroke-width="0.75"/>
 </svg>

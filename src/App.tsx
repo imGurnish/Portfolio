@@ -8,16 +8,20 @@ import {
   Compass,
   ExternalLink,
   GraduationCap,
-  FolderGit,
   Layers3,
   Mail,
   MapPin,
   Phone,
+  Search,
   Shield,
+  ShieldCheck,
   Sparkles,
+  Smartphone,
   TerminalSquare,
   type LucideIcon,
 } from 'lucide-react'
+import { FaGithub, FaLinkedin } from 'react-icons/fa'
+import type { ComponentType } from 'react'
 import { useEffect, useState } from 'react'
 
 type Highlight = {
@@ -66,13 +70,44 @@ type LinkCard = {
   label: string
   value: string
   href: string
+  icon: ComponentType<{ className?: string }>
+}
+
+type SeoCard = {
+  title: string
+  summary: string
   icon: LucideIcon
+  tags: string[]
 }
 
 const highlights: Highlight[] = [
   { label: 'CGPA', value: '8.42', detail: 'IIIT Kota, CSE' },
   { label: 'Primary stack', value: 'MERN + Flutter', detail: 'Web and mobile delivery' },
   { label: 'Focus', value: 'Product + security', detail: 'Shipping for real users' },
+]
+
+const seoCards: SeoCard[] = [
+  {
+    title: 'Full-stack web development',
+    summary:
+      'I build React and Node.js applications with polished interfaces, role-based access, and deployment-ready architecture for real users.',
+    icon: Search,
+    tags: ['React', 'Node.js', 'Express', 'MongoDB'],
+  },
+  {
+    title: 'Flutter mobile products',
+    summary:
+      'I create Flutter apps for Android, iOS, and desktop with responsive layouts, maintainable state management, and clean UX details.',
+    icon: Smartphone,
+    tags: ['Flutter', 'Dart', 'BLoC', 'Responsive UI'],
+  },
+  {
+    title: 'Security-first systems',
+    summary:
+      'My work leans toward secure authentication, encrypted flows, audit-friendly flows, and backend logic that can survive production use.',
+    icon: ShieldCheck,
+    tags: ['Authentication', 'Encryption', 'Audit logs', 'APIs'],
+  },
 ]
 
 const skillGroups: SkillGroup[] = [
@@ -292,13 +327,13 @@ const contactLinks: LinkCard[] = [
     label: 'LinkedIn',
     value: 'gurnish-singh-sangha-16b19428b',
     href: 'https://www.linkedin.com/in/gurnish-singh-sangha-16b19428b/',
-    icon: ExternalLink,
+    icon: FaLinkedin,
   },
   {
     label: 'GitHub',
     value: '@imGurnish',
     href: 'https://github.com/imGurnish',
-    icon: FolderGit,
+    icon: FaGithub,
   },
 ]
 
@@ -338,12 +373,15 @@ function App() {
       <section className="relative mx-auto w-full max-w-[1680px] px-4 pb-14 pt-5 sm:px-6 sm:pb-16 sm:pt-6 lg:px-10 2xl:px-12">
         <header className="mb-8 flex items-center justify-between gap-4 border-b border-white/10 pb-5 sm:mb-12 sm:pb-6">
           <div>
-            <p className="text-xs uppercase tracking-[0.4em] text-cyan-200/70">Portfolio</p>
-            <h1 className="mt-2 text-lg font-semibold tracking-wide text-white">Gurnish Singh Sangha</h1>
+            <div>
+              <p className="text-xs uppercase tracking-[0.4em] text-cyan-200/70">Portfolio</p>
+              <h1 className="mt-2 text-lg font-semibold tracking-wide text-white">Gurnish Singh Sangha</h1>
+            </div>
           </div>
 
           <nav className="hidden items-center gap-2 md:flex">
             {[
+              ['About', '#about'],
               ['Skills', '#skills'],
               ['Projects', '#projects'],
               ['Experience', '#experience'],
@@ -362,6 +400,7 @@ function App() {
 
         <nav className="-mt-2 mb-6 grid grid-cols-2 gap-2 pb-1 md:hidden">
           {[
+            ['About', '#about'],
             ['Skills', '#skills'],
             ['Projects', '#projects'],
             ['Experience', '#experience'],
@@ -402,9 +441,13 @@ function App() {
                 Building calm interfaces and resilient systems with a security-first mindset.
               </h2>
               <p className="mt-5 max-w-2xl text-[0.98rem] leading-7 text-slate-300 sm:mt-6 sm:text-lg sm:leading-8">
-                I am a Computer Science student at IIIT Kota who likes turning product ideas into reliable web and mobile
-                experiences. I work across the MERN stack, Flutter, and backend systems, with a strong bias toward clean
-                architecture, secure flows, and shipping real value.
+                I am a Computer Science student at IIIT Kota who turns product ideas into reliable web and mobile
+                experiences. I work across React, TypeScript, Node.js, Express, MongoDB, Flutter, and backend systems,
+                with a strong bias toward clean architecture, secure flows, and shipping real value.
+              </p>
+              <p className="mt-4 max-w-2xl text-sm leading-7 text-slate-400 sm:text-base">
+                My portfolio focuses on searchable, production-oriented work: student platforms, secure payment ideas,
+                mobile apps, admin dashboards, and projects that show both execution and technical depth.
               </p>
             </div>
 
@@ -499,6 +542,86 @@ function App() {
             </div>
 
           </motion.aside>
+        </div>
+      </section>
+
+      <section id="about" className="relative mx-auto w-full max-w-[1680px] px-4 py-12 sm:px-6 sm:py-14 lg:px-10 2xl:px-12">
+        <div className="grid gap-4 lg:grid-cols-[0.88fr_1.12fr]">
+          <motion.article
+            initial={reduceMotion ? false : { opacity: 0, y: 16 }}
+            whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.55, ease: 'easeOut' }}
+            className="rounded-[2rem] border border-white/10 bg-white/5 p-6 backdrop-blur-xl"
+          >
+            <p className="text-xs uppercase tracking-[0.35em] text-cyan-200/70">About</p>
+            <h2 className="mt-3 text-3xl font-semibold tracking-[-0.03em] text-white sm:text-4xl">
+              A portfolio built to explain the work clearly and rank for the right searches.
+            </h2>
+            <p className="mt-4 text-sm leading-7 text-slate-300 sm:text-base">
+              I design and build full-stack products with a focus on clarity, trust, and measurable usefulness. That
+              usually means responsive interfaces, predictable API behavior, clean state management, and enough detail
+              in the copy for recruiters, collaborators, and search engines to understand what I do.
+            </p>
+
+            <div className="mt-5 rounded-[1.5rem] border border-white/10 bg-slate-950/35 p-5">
+              <p className="text-xs uppercase tracking-[0.24em] text-slate-400">What I want this site to show</p>
+              <ul className="mt-4 grid gap-3 text-sm leading-7 text-slate-200 sm:grid-cols-2">
+                <li className="rounded-2xl border border-white/10 bg-slate-950/35 p-4">
+                  React, Flutter, and Node.js work that feels polished and intentional.
+                </li>
+                <li className="rounded-2xl border border-white/10 bg-slate-950/35 p-4">
+                  Secure application design with authentication, encryption, and admin workflows.
+                </li>
+                <li className="rounded-2xl border border-white/10 bg-slate-950/35 p-4">
+                  Hackathon results, internships, and campus leadership that show consistent delivery.
+                </li>
+                <li className="rounded-2xl border border-white/10 bg-slate-950/35 p-4">
+                  A clear path to contact me for internships, freelance work, or collaboration.
+                </li>
+              </ul>
+            </div>
+          </motion.article>
+
+          <div className="grid gap-4">
+            {seoCards.map((card, index) => {
+              const Icon = card.icon
+
+              return (
+                <motion.article
+                  key={card.title}
+                  initial={reduceMotion ? false : { opacity: 0, y: 16 }}
+                  whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.55, delay: index * 0.06, ease: 'easeOut' }}
+                  className="rounded-[1.75rem] border border-white/10 bg-white/5 p-6 backdrop-blur-xl"
+                >
+                  <div className="flex items-center gap-3">
+                    <div className="rounded-2xl border border-white/10 bg-white/8 p-3 text-cyan-100">
+                      <Icon className="h-5 w-5" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold text-white">{card.title}</h3>
+                      <p className="text-sm text-slate-400">Search-friendly summary of my current focus</p>
+                    </div>
+                  </div>
+
+                  <p className="mt-4 text-sm leading-7 text-slate-300 sm:text-base">{card.summary}</p>
+
+                  <div className="mt-5 flex flex-wrap gap-2">
+                    {card.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="rounded-full border border-white/10 bg-slate-950/40 px-3 py-1.5 text-sm text-slate-200"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </motion.article>
+              )
+            })}
+          </div>
         </div>
       </section>
 
@@ -701,7 +824,7 @@ function App() {
                         className="inline-flex items-center justify-center gap-2 rounded-full border border-white/10 bg-slate-950/40 px-3 py-2 text-xs font-medium text-slate-200 transition hover:border-cyan-300/40 hover:bg-white/10"
                       >
                         Repo
-                        <FolderGit className="h-3.5 w-3.5" />
+                        <FaGithub className="h-3.5 w-3.5" />
                       </a>
                       <a
                         href={currentProject.liveUrl}
@@ -784,7 +907,7 @@ function App() {
                   className="inline-flex items-center justify-between rounded-2xl border border-white/10 bg-slate-950/35 px-4 py-3 text-sm text-slate-200 transition hover:border-cyan-300/40 hover:bg-white/10"
                 >
                   Open repository
-                  <FolderGit className="h-4 w-4" />
+                  <FaGithub className="h-4 w-4" />
                 </a>
                 <a
                   href={currentProject.liveUrl}
@@ -860,7 +983,7 @@ function App() {
                       className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs text-slate-200 transition hover:border-cyan-300/40 hover:bg-white/10"
                     >
                       Repository
-                      <FolderGit className="h-3.5 w-3.5" />
+                      <FaGithub className="h-3.5 w-3.5" />
                     </a>
                     {project.liveUrl.startsWith('http') ? (
                       <a
