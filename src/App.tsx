@@ -386,48 +386,51 @@ function App() {
             initial={reduceMotion ? false : { opacity: 0, y: 24 }}
             animate={reduceMotion ? undefined : { opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: 'easeOut' }}
-            className="relative overflow-hidden rounded-[1.75rem] border border-white/10 bg-white/6 p-6 shadow-[0_24px_80px_rgba(0,0,0,0.35)] backdrop-blur-xl sm:rounded-[2rem] sm:p-10 lg:p-12"
+            className="relative flex h-full flex-col overflow-hidden rounded-[1.75rem] border border-white/10 bg-white/6 p-6 shadow-[0_24px_80px_rgba(0,0,0,0.35)] backdrop-blur-xl sm:rounded-[2rem] sm:p-10 lg:p-12"
           >
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(45,212,191,0.18),transparent_28%),radial-gradient(circle_at_85%_10%,rgba(147,51,234,0.18),transparent_26%),linear-gradient(135deg,rgba(255,255,255,0.05),transparent_30%)]" />
-            <div className="relative flex flex-wrap gap-3">
-              <span className="inline-flex items-center gap-2 rounded-full border border-cyan-300/20 bg-cyan-300/10 px-4 py-2 text-sm font-medium text-cyan-100">
-                <Sparkles className="h-4 w-4" />
-                Full-Stack Engineer | Secure Product Builder
-              </span>
-              <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-200/90">
-                <MapPin className="h-4 w-4 text-emerald-300" />
-                IIIT Kota, Rajasthan
-              </span>
-            </div>
+            <div className="relative flex flex-1 flex-col">
+              <div className="flex flex-wrap gap-3">
+                <span className="inline-flex items-center gap-2 rounded-full border border-cyan-300/20 bg-cyan-300/10 px-4 py-2 text-sm font-medium text-cyan-100">
+                  <Sparkles className="h-4 w-4" />
+                  Full-Stack Engineer | Secure Product Builder
+                </span>
+                <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-200/90">
+                  <MapPin className="h-4 w-4 text-emerald-300" />
+                  IIIT Kota, Rajasthan
+                </span>
+              </div>
 
-            <div className="relative mt-7 max-w-3xl">
-              <p className="text-sm font-medium uppercase tracking-[0.3em] text-cyan-200/70">Gurnish Singh Sangha</p>
-              <h2 className="mt-4 text-[2rem] font-semibold tracking-[-0.04em] text-white sm:text-4xl lg:text-[3.6rem]">
-                Building calm interfaces and resilient systems with a security-first mindset.
-              </h2>
-              <p className="mt-5 max-w-2xl text-[0.98rem] leading-7 text-slate-300 sm:mt-6 sm:text-lg sm:leading-8">
-                I am a Computer Science student at IIIT Kota who turns product ideas into reliable web and mobile
-                experiences. I work across React, TypeScript, Node.js, Express, MongoDB, Flutter, and backend systems,
-                with a strong bias toward clean architecture, secure flows, and shipping real value.
-              </p>
-              
-            </div>
+              <div className="relative mt-7 max-w-3xl">
+                <p className="text-sm font-medium uppercase tracking-[0.3em] text-cyan-200/70">Gurnish Singh Sangha</p>
+                <h2 className="mt-4 text-[2rem] font-semibold tracking-[-0.04em] text-white sm:text-4xl lg:text-[3.6rem]">
+                  Building calm interfaces and resilient systems with a security-first mindset.
+                </h2>
+                <p className="mt-5 max-w-2xl text-[0.98rem] leading-7 text-slate-300 sm:mt-6 sm:text-lg sm:leading-8">
+                  I am a Computer Science student at IIIT Kota who turns product ideas into reliable web and mobile
+                  experiences. I work across React, TypeScript, Node.js, Express, MongoDB, Flutter, and backend systems,
+                  with a strong bias toward clean architecture, secure flows, and shipping real value.
+                </p>
+              </div>
 
-            <div className="relative mt-8 flex flex-wrap gap-3">
-              <a
-                href="mailto:gurnishsinghsangha@gmail.com"
-                className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-semibold text-slate-950 transition hover:translate-y-[-1px] hover:bg-cyan-100"
-              >
-                <Mail className="h-4 w-4" />
-                Email me
-              </a>
-              <a
-                href="#projects"
-                className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-5 py-3 text-sm font-semibold text-white transition hover:border-cyan-300/40 hover:bg-white/10"
-              >
-                View projects
-                <ArrowRight className="h-4 w-4" />
-              </a>
+              <div className="relative mt-8 flex flex-wrap gap-3">
+                <a
+                  href="mailto:gurnishsinghsangha@gmail.com"
+                  className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-semibold text-slate-950 transition hover:translate-y-[-1px] hover:bg-cyan-100"
+                >
+                  <Mail className="h-4 w-4" />
+                  Email me
+                </a>
+                <a
+                  href="#projects"
+                  className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-5 py-3 text-sm font-semibold text-white transition hover:border-cyan-300/40 hover:bg-white/10"
+                >
+                  View projects
+                  <ArrowRight className="h-4 w-4" />
+                </a>
+              </div>
+
+              <div className="flex-1" />
             </div>
 
             <div className="relative mt-6 overflow-hidden rounded-[1.5rem] border border-white/10 bg-white/6 p-3 backdrop-blur-xl sm:hidden">
@@ -444,7 +447,7 @@ function App() {
               </div>
             </div>
 
-            <div className="relative mt-8 grid gap-3 sm:mt-10 sm:gap-4 sm:grid-cols-3">
+            <div className="relative mt-auto grid gap-3 sm:mt-10 sm:gap-4 sm:grid-cols-3">
               {highlights.map((item) => (
                 <div key={item.label} className="rounded-2xl border border-white/10 bg-slate-950/30 p-4">
                   <p className="text-xs uppercase tracking-[0.24em] text-slate-400">{item.label}</p>
@@ -459,15 +462,15 @@ function App() {
             initial={reduceMotion ? false : { opacity: 0, y: 24 }}
             animate={reduceMotion ? undefined : { opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1, ease: 'easeOut' }}
-            className="grid gap-4"
+            className="flex h-full flex-col gap-4"
           >
-            <div className="relative hidden overflow-hidden rounded-[1.75rem] border border-white/10 bg-white/6 p-3.5 backdrop-blur-xl sm:block sm:rounded-[2rem] sm:p-4">
+            <div className="relative hidden min-h-[28rem] w-full flex-1 overflow-hidden rounded-[1.75rem] border border-white/10 bg-white/6 p-3.5 backdrop-blur-xl sm:block sm:rounded-[2rem] sm:p-4">
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(103,232,249,0.18),transparent_30%),radial-gradient(circle_at_bottom_right,rgba(168,85,247,0.14),transparent_28%)]" />
-              <div className="relative overflow-hidden rounded-[1.5rem] border border-white/10 bg-slate-950/40">
+              <div className="relative flex h-full overflow-hidden rounded-[1.5rem] border border-white/10 bg-slate-950/40">
                 <img
                   src="/Gurnish_Singh_Sangha.jpg"
                   alt="Gurnish Singh Sangha portrait"
-                  className="h-[21rem] w-full object-cover object-center sm:h-[24rem] lg:h-[28rem]"
+                  className="h-full w-full object-cover object-center"
                 />
                 <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent p-5">
                   <p className="text-xs uppercase tracking-[0.32em] text-cyan-100/80">Profile</p>
@@ -477,7 +480,7 @@ function App() {
               </div>
             </div>
 
-            <div className="rounded-[1.75rem] border border-white/10 bg-white/6 p-5 backdrop-blur-xl sm:rounded-[2rem] sm:p-6">
+            <div className="w-full flex-none rounded-[1.75rem] border border-white/10 bg-white/6 p-5 backdrop-blur-xl sm:rounded-[2rem] sm:p-6">
               <div className="flex items-center justify-between gap-4">
                 <div>
                   <p className="text-xs uppercase tracking-[0.32em] text-slate-400">Snapshot</p>
