@@ -12,11 +12,8 @@ import {
   Mail,
   MapPin,
   Phone,
-  Search,
   Shield,
-  ShieldCheck,
   Sparkles,
-  Smartphone,
   TerminalSquare,
   type LucideIcon,
 } from 'lucide-react'
@@ -73,41 +70,10 @@ type LinkCard = {
   icon: ComponentType<{ className?: string }>
 }
 
-type SeoCard = {
-  title: string
-  summary: string
-  icon: LucideIcon
-  tags: string[]
-}
-
 const highlights: Highlight[] = [
   { label: 'CGPA', value: '8.42', detail: 'IIIT Kota, CSE' },
   { label: 'Primary stack', value: 'MERN + Flutter', detail: 'Web and mobile delivery' },
   { label: 'Focus', value: 'Product + security', detail: 'Shipping for real users' },
-]
-
-const seoCards: SeoCard[] = [
-  {
-    title: 'Full-stack web development',
-    summary:
-      'I build React and Node.js applications with polished interfaces, role-based access, and deployment-ready architecture for real users.',
-    icon: Search,
-    tags: ['React', 'Node.js', 'Express', 'MongoDB'],
-  },
-  {
-    title: 'Flutter mobile products',
-    summary:
-      'I create Flutter apps for Android, iOS, and desktop with responsive layouts, maintainable state management, and clean UX details.',
-    icon: Smartphone,
-    tags: ['Flutter', 'Dart', 'BLoC', 'Responsive UI'],
-  },
-  {
-    title: 'Security-first systems',
-    summary:
-      'My work leans toward secure authentication, encrypted flows, audit-friendly flows, and backend logic that can survive production use.',
-    icon: ShieldCheck,
-    tags: ['Authentication', 'Encryption', 'Audit logs', 'APIs'],
-  },
 ]
 
 const skillGroups: SkillGroup[] = [
