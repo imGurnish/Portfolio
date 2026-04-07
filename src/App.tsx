@@ -381,7 +381,6 @@ function App() {
 
           <nav className="hidden items-center gap-2 md:flex">
             {[
-              ['About', '#about'],
               ['Skills', '#skills'],
               ['Projects', '#projects'],
               ['Experience', '#experience'],
@@ -400,7 +399,7 @@ function App() {
 
         <nav className="-mt-2 mb-6 grid grid-cols-2 gap-2 pb-1 md:hidden">
           {[
-            ['About', '#about'],
+
             ['Skills', '#skills'],
             ['Projects', '#projects'],
             ['Experience', '#experience'],
@@ -445,10 +444,7 @@ function App() {
                 experiences. I work across React, TypeScript, Node.js, Express, MongoDB, Flutter, and backend systems,
                 with a strong bias toward clean architecture, secure flows, and shipping real value.
               </p>
-              <p className="mt-4 max-w-2xl text-sm leading-7 text-slate-400 sm:text-base">
-                My portfolio focuses on searchable, production-oriented work: student platforms, secure payment ideas,
-                mobile apps, admin dashboards, and projects that show both execution and technical depth.
-              </p>
+              
             </div>
 
             <div className="relative mt-8 flex flex-wrap gap-3">
@@ -545,85 +541,7 @@ function App() {
         </div>
       </section>
 
-      <section id="about" className="relative mx-auto w-full max-w-[1680px] px-4 py-12 sm:px-6 sm:py-14 lg:px-10 2xl:px-12">
-        <div className="grid gap-4 lg:grid-cols-[0.88fr_1.12fr]">
-          <motion.article
-            initial={reduceMotion ? false : { opacity: 0, y: 16 }}
-            whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.55, ease: 'easeOut' }}
-            className="rounded-[2rem] border border-white/10 bg-white/5 p-6 backdrop-blur-xl"
-          >
-            <p className="text-xs uppercase tracking-[0.35em] text-cyan-200/70">About</p>
-            <h2 className="mt-3 text-3xl font-semibold tracking-[-0.03em] text-white sm:text-4xl">
-              A portfolio built to explain the work clearly and rank for the right searches.
-            </h2>
-            <p className="mt-4 text-sm leading-7 text-slate-300 sm:text-base">
-              I design and build full-stack products with a focus on clarity, trust, and measurable usefulness. That
-              usually means responsive interfaces, predictable API behavior, clean state management, and enough detail
-              in the copy for recruiters, collaborators, and search engines to understand what I do.
-            </p>
-
-            <div className="mt-5 rounded-[1.5rem] border border-white/10 bg-slate-950/35 p-5">
-              <p className="text-xs uppercase tracking-[0.24em] text-slate-400">What I want this site to show</p>
-              <ul className="mt-4 grid gap-3 text-sm leading-7 text-slate-200 sm:grid-cols-2">
-                <li className="rounded-2xl border border-white/10 bg-slate-950/35 p-4">
-                  React, Flutter, and Node.js work that feels polished and intentional.
-                </li>
-                <li className="rounded-2xl border border-white/10 bg-slate-950/35 p-4">
-                  Secure application design with authentication, encryption, and admin workflows.
-                </li>
-                <li className="rounded-2xl border border-white/10 bg-slate-950/35 p-4">
-                  Hackathon results, internships, and campus leadership that show consistent delivery.
-                </li>
-                <li className="rounded-2xl border border-white/10 bg-slate-950/35 p-4">
-                  A clear path to contact me for internships, freelance work, or collaboration.
-                </li>
-              </ul>
-            </div>
-          </motion.article>
-
-          <div className="grid gap-4">
-            {seoCards.map((card, index) => {
-              const Icon = card.icon
-
-              return (
-                <motion.article
-                  key={card.title}
-                  initial={reduceMotion ? false : { opacity: 0, y: 16 }}
-                  whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.3 }}
-                  transition={{ duration: 0.55, delay: index * 0.06, ease: 'easeOut' }}
-                  className="rounded-[1.75rem] border border-white/10 bg-white/5 p-6 backdrop-blur-xl"
-                >
-                  <div className="flex items-center gap-3">
-                    <div className="rounded-2xl border border-white/10 bg-white/8 p-3 text-cyan-100">
-                      <Icon className="h-5 w-5" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-semibold text-white">{card.title}</h3>
-                      <p className="text-sm text-slate-400">Search-friendly summary of my current focus</p>
-                    </div>
-                  </div>
-
-                  <p className="mt-4 text-sm leading-7 text-slate-300 sm:text-base">{card.summary}</p>
-
-                  <div className="mt-5 flex flex-wrap gap-2">
-                    {card.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="rounded-full border border-white/10 bg-slate-950/40 px-3 py-1.5 text-sm text-slate-200"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </motion.article>
-              )
-            })}
-          </div>
-        </div>
-      </section>
+      
 
       <section id="skills" className="relative mx-auto w-full max-w-[1680px] px-4 py-12 sm:px-6 sm:py-14 lg:px-10 2xl:px-12">
         <div className="mb-8 flex items-end justify-between gap-6">
