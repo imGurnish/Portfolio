@@ -436,7 +436,7 @@ function App() {
             <div className="relative mt-6 overflow-hidden rounded-[1.5rem] border border-white/10 bg-white/6 p-3 backdrop-blur-xl sm:hidden">
               <div className="overflow-hidden rounded-[1.2rem] border border-white/10 bg-slate-950/40">
                 <img
-                  src="/Gurnish_Singh_Sangha.jpg"
+                  src="/Gurnish_Singh_Sangha.png"
                   alt="Gurnish Singh Sangha portrait"
                   className="h-72 w-full object-cover object-center"
                 />
@@ -468,7 +468,7 @@ function App() {
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(103,232,249,0.18),transparent_30%),radial-gradient(circle_at_bottom_right,rgba(168,85,247,0.14),transparent_28%)]" />
               <div className="relative flex h-full overflow-hidden rounded-[1.5rem] border border-white/10 bg-slate-950/40">
                 <img
-                  src="/Gurnish_Singh_Sangha.jpg"
+                  src="/Gurnish_Singh_Sangha.png"
                   alt="Gurnish Singh Sangha portrait"
                   className="h-full w-full object-cover object-center"
                 />
