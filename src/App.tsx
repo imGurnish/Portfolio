@@ -159,7 +159,7 @@ const mainProjects: ProjectItem[] = [
     ],
     gradient: 'from-sky-500/35 via-cyan-300/15 to-fuchsia-400/20',
     repoUrl: 'https://github.com/imGurnish/LinkSuraksha',
-    liveUrl: 'https://linksuraksha.gurnishsingh.tech',
+    liveUrl: 'https://linksuraksha.gurnishsingh.in',
     screenshots: [
       '/1-linksuraksha.png',
       '/2-linksuraksha.png',
@@ -183,7 +183,7 @@ const mainProjects: ProjectItem[] = [
     ],
     gradient: 'from-emerald-400/30 via-lime-300/15 to-teal-500/20',
     repoUrl: 'https://github.com/imGurnish/WisdomHub',
-    liveUrl: 'https://wisdomhub.gurnishsingh.tech',
+    liveUrl: 'https://wisdomhub.gurnishsingh.in',
     screenshots: [
       '/1-wisdomhub.png',
       '/2-wisdomhub.png',
@@ -207,7 +207,7 @@ const mainProjects: ProjectItem[] = [
     ],
     gradient: 'from-violet-400/30 via-indigo-300/20 to-blue-500/20',
     repoUrl: 'https://github.com/imGurnish/Locksy',
-    liveUrl: 'https://locksy.gurnishsingh.tech',
+    liveUrl: 'https://locksy.gurnishsingh.in',
     screenshots: ['/1-locksy.jpg', '/2-locksy.jpg', '/3-locksy.jpg', '/4-locksy.jpg', '/5-locksy.jpg'],
     previewMode: 'dual-mobile',
   },
@@ -224,7 +224,7 @@ const mainProjects: ProjectItem[] = [
     ],
     gradient: 'from-orange-400/30 via-amber-300/15 to-rose-500/20',
     repoUrl: 'https://github.com/imGurnish/Musee-client',
-    liveUrl: 'https://musee.gurnishsingh.tech',
+    liveUrl: 'https://musee.gurnishsingh.in',
     screenshots: [
       '/1-musee.png',
       '/2-musee.png',
@@ -244,7 +244,7 @@ const otherProjects: SecondaryProject[] = [
       'Frontend for a freelancing workflow platform with responsive pages and a modern Tailwind-driven UI.',
     stack: ['React', 'Vite', 'Tailwind CSS'],
     repoUrl: 'https://github.com/imGurnish/Outsource-Now',
-    liveUrl: 'https://outsourcenow.gurnishsingh.tech/',
+    liveUrl: 'https://outsourcenow.gurnishsingh.in/',
   },
   {
     title: 'ForecastEase',

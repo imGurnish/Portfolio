@@ -2,7 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="canonical" href="https://gurnishsingh.tech/" />
+    <link rel="canonical" href="https://gurnishsingh.in/" />
+    <link rel="alternate" hreflang="en-IN" href="https://gurnishsingh.in/" />
     <link rel="icon" type="image/png" href="/Gurnish_Singh_Sangha.png" />
     <link rel="shortcut icon" type="image/png" href="/Gurnish_Singh_Sangha.png" />
     <link rel="apple-touch-icon" href="/Gurnish_Singh_Sangha.png" />
@@ -17,19 +18,24 @@
       content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"
     />
     <meta
+      name="googlebot"
+      content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"
+    />
+    <meta
       name="description"
       content="Portfolio of Gurnish Singh Sangha, a full-stack developer and IIIT Kota CSE student building React, Flutter, and security-focused software products."
     />
     <meta name="application-name" content="Gurnish Singh Sangha Portfolio" />
     <meta name="theme-color" content="#050816" />
-    <meta property="og:url" content="https://gurnishsingh.tech/" />
+    <meta property="og:url" content="https://gurnishsingh.in/" />
     <meta property="og:type" content="profile" />
+    <meta property="og:site_name" content="Gurnish Singh Sangha Portfolio" />
     <meta property="og:title" content="Gurnish Singh Sangha | Full-Stack Developer Portfolio" />
     <meta
       property="og:description"
       content="Explore Gurnish Singh Sangha's portfolio of React, Flutter, Node.js, and secure product engineering work at IIIT Kota."
     />
-    <meta property="og:image" content="/Gurnish_Singh_Sangha.png" />
+    <meta property="og:image" content="https://gurnishsingh.in/Gurnish_Singh_Sangha.png" />
     <meta property="og:image:alt" content="Portrait of Gurnish Singh Sangha" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Gurnish Singh Sangha | Full-Stack Developer Portfolio" />
@@ -37,7 +43,8 @@
       name="twitter:description"
       content="Portfolio of a React, Flutter, and Node.js developer focused on secure, production-ready software."
     />
-    <meta name="twitter:image" content="/Gurnish_Singh_Sangha.png" />
+    <meta name="twitter:image" content="https://gurnishsingh.in/Gurnish_Singh_Sangha.png" />
+    <meta name="twitter:url" content="https://gurnishsingh.in/" />
     <meta name="twitter:creator" content="@imGurnish" />
     <meta name="twitter:site" content="@imGurnish" />
     <title>Gurnish Singh Sangha | Full-Stack Developer Portfolio</title>
@@ -47,21 +54,24 @@
         "@graph": [
           {
             "@type": "WebSite",
-            "@id": "https://gurnishsingh.tech/#website",
-            "url": "https://gurnishsingh.tech/",
+            "@id": "https://gurnishsingh.in/#website",
+            "url": "https://gurnishsingh.in/",
             "name": "Gurnish Singh Sangha Portfolio",
             "description": "Portfolio of Gurnish Singh Sangha, a full-stack developer and IIIT Kota CSE student building React, Flutter, and security-focused software products.",
-            "inLanguage": "en-IN"
+            "inLanguage": "en-IN",
+            "publisher": {
+              "@id": "https://gurnishsingh.in/#person"
+            }
           },
           {
             "@type": "Person",
-            "@id": "https://gurnishsingh.tech/#person",
+            "@id": "https://gurnishsingh.in/#person",
             "name": "Gurnish Singh Sangha",
             "alternateName": ["Gurnish", "Gurnish Singh"],
             "jobTitle": "Full-Stack Developer",
-            "url": "https://gurnishsingh.tech/",
+            "url": "https://gurnishsingh.in/",
             "description": "Computer Science student at IIIT Kota building React, Flutter, Node.js, and security-focused software products.",
-            "image": "https://gurnishsingh.tech/Gurnish_Singh_Sangha.png",
+            "image": "https://gurnishsingh.in/Gurnish_Singh_Sangha.png",
             "alumniOf": {
               "@type": "CollegeOrUniversity",
               "name": "Indian Institute of Information Technology Kota"
@@ -79,8 +89,54 @@
             ],
             "sameAs": [
               "https://www.linkedin.com/in/gurnish-singh-sangha-16b19428b/",
-              "https://github.com/imGurnish"
+              "https://github.com/imGurnish",
+              "https://musee.gurnishsingh.in",
+              "https://wisdomhub.gurnishsingh.in",
+              "https://docktools.gurnishsingh.in"
             ]
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://gurnishsingh.in/#webpage",
+            "url": "https://gurnishsingh.in/",
+            "name": "Gurnish Singh Sangha | Full-Stack Developer Portfolio",
+            "isPartOf": {
+              "@id": "https://gurnishsingh.in/#website"
+            },
+            "about": {
+              "@id": "https://gurnishsingh.in/#person"
+            },
+            "primaryImageOfPage": {
+              "@type": "ImageObject",
+              "url": "https://gurnishsingh.in/Gurnish_Singh_Sangha.png"
+            },
+            "mainEntity": {
+              "@type": "ItemList",
+              "name": "Featured Projects",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "url": "https://musee.gurnishsingh.in"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "url": "https://wisdomhub.gurnishsingh.in"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "url": "https://docktools.gurnishsingh.in"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 4,
+                  "url": "https://linksuraksha.gurnishsingh.in"
+                }
+              ]
+            },
+            "inLanguage": "en-IN"
           }
         ]
       }
